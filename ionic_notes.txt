@@ -1,0 +1,1 @@
+Run ionic capacitor add to add a native iOS or Android project using Capacitor
