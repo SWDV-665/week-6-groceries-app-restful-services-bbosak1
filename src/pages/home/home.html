@@ -6,11 +6,11 @@
 
 <ion-content padding>
 
-  <h3 text-center *ngIf="loadItems().length === 0">
+  <h3 text-center *ngIf="items.length === 0">
     No item available on the list!
   </h3>
   <ion-list>
-    <ion-item-sliding *ngFor="let item of loadItems(); let i = index">
+    <ion-item-sliding *ngFor="let item of items; let i = index">
       <ion-item>
         <ion-label>
           <h2>{{item.name}}</h2>
@@ -28,7 +28,7 @@
           Share
         </button>
 
-        <button (click)="removeItem(item, i)" ion-button color="danger" icon-start>
+        <button (click)="removeItem(item)" ion-button color="danger" icon-start>
           <ion-icon name="trash"></ion-icon>
           Remove
         </button>
